@@ -2,4 +2,4 @@ runtime: nodejs16
 service: server
 entrypoint: node index.js
 env_variables:
-  GAE_DB_ADDRESS: "/cloudsql/compact-medium-379113:asia-southeast1:gae-db-demo"
+  GAE_DB_ADDRESS: "/cloudsql/compact-medium-379113:asia-southeast1:nanda"
