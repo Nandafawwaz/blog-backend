@@ -18,12 +18,6 @@ let dbConfig = {
   },
 };
 
-if (process.env.NODE_ENV == "production") {
-  dbConfig.connection.socketPath = process.env.GAE_DB_ADDRESS;
-} else {
-  dbConfig.connection.host = "127.0.0.1";
-}
-
 const knex = require("knex")(dbConfig);
 
 app.get("/", (req, res) => {
