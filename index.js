@@ -11,9 +11,9 @@ let dbConfig = {
   /* Notice! These are here for demo purposes. DO NOT COMMIT YOUR INFO to version control*/
   client: "mysql",
   connection: {
-    user: "root",
+    user: "nanda",
     host: "34.143.242.36",
-    password: "",
+    password: "fawwaz",
     database: "gae-demo-db",
   },
 };
