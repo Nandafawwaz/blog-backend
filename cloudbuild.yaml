@@ -1,0 +1,13 @@
+steps:
+# Build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/compact-medium-379113/blog-backend', '.']
+# Push the container image to Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/compact-medium-379113/blog-backend']
+# Deploy container image to Cloud Run
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args: ['run', 'deploy', 'blog-backend', '--image', 'gcr.io/compact-medium-379113/blog-backend', '--region', 'asia-southeast2']
+images:
+- gcr.io/compact-medium-379113/blog-backend
